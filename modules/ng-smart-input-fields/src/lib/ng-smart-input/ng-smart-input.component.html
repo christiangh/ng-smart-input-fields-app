@@ -1,0 +1,17 @@
+<mat-form-field class="ng-smart-input__container" [ngClass]="getClasses()">
+    @if(computedLabel()) {
+    <mat-label class="ng-smart-input__label">{{ computedLabel() }}</mat-label>
+    }
+
+    <input
+        matInput
+        [type]="type || 'text'"
+        [formControl]="formControl"
+        class="ng-smart-input__input"
+        [placeholder]="placeholder"
+        [attr.autocomplete]="autocomplete ? autocomplete : null" />
+        
+    <mat-error class="ng-smart-input__error" [title]="getErrors()">
+        {{ getErrors() }}
+    </mat-error>
+</mat-form-field>
