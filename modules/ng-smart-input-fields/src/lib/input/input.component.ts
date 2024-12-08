@@ -4,14 +4,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { ControlValueAccessorDirective } from '../utils/control-value-accessor.directive';
-import { NgSmartInputType } from './ng-smart-input.model';
+import { NgSmartInputType } from './input.model';
 
 @Component({
     selector: 'ng-smart-input',
     standalone: true,
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatInputModule],
-    templateUrl: './ng-smart-input.component.html',
-    styleUrl: './ng-smart-input.component.scss',
+    templateUrl: './input.component.html',
+    styleUrl: './input.component.scss',
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

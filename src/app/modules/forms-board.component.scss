@@ -1,0 +1,30 @@
+.forms-board-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+    padding-bottom: 1rem;
+
+    .board-section {
+        width: 100%;
+        height: auto;
+        border: 1px solid #BBCCBB;
+
+        .board-header {
+            width: 100%;
+            height: auto;
+            padding: 0.5rem 1.5rem;
+            background-color: #BBCCBB;
+            color: #FFFFFF;
+        }
+
+        .board-body {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 1rem 1rem;
+            background-color: #FFFFFF;
+        }
+    }
+}
