@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '@angular/material/core/theming/all-theme';
 
 html,
 body {
@@ -10,11 +12,4 @@ body {
 * {
     margin: 0;
     box-sizing: border-box;
-}
-
-.jaro-font {
-    font-family: "Jaro", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
 }

@@ -9,7 +9,7 @@ import { ControlValueAccessor, FormControl, FormControlName, FormGroupDirective,
 })
 export class ControlValueAccessorDirective implements ControlValueAccessor, OnInit {
     label = input<string>('');
-    @Input() inheritedFormControl?: FormControl;
+    @Input() injectedFormControl?: FormControl;
 
     computedLabel = computed<string>(this.getComputedLabelFn());
     getErrors = signal<string[]>([]);
@@ -43,8 +43,8 @@ export class ControlValueAccessorDirective implements ControlValueAccessor, OnIn
     }
 
     setFormControl() {
-        if (this.inheritedFormControl) {
-            this.control = this.inheritedFormControl;
+        if (this.injectedFormControl) {
+            this.control = this.injectedFormControl;
             return;
         }
 
@@ -85,6 +85,10 @@ export class ControlValueAccessorDirective implements ControlValueAccessor, OnIn
                 return `${this.computedLabel() ? this.computedLabel() : "The field"} ${error}`
             })
         );
+    }
+
+    getValue(): any {
+        return this.control.value;
     }
 
     writeValue() {}
